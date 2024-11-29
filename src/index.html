@@ -1,17 +1,168 @@
-<!DOCTYPE html>
-<html lang="en">
-
+﻿<!DOCTYPE html>
+<html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="styles.css">
-  <title>Vanilla JavaScript App</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resurse de Calcul - Gavrila Vladut-Vasile</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <main>
-    <h1>Vanilla JavaScript App</h1>
-  </main>
-</body>
+    <header>
+        <div class="header-container">
+            <h1>Gavrila Vladut-Vasile</h1>
+            <p class="subtitle">O privire detaliată asupra rețelei și resurselor personale</p>
+            <button id="darkModeToggle" class="dark-mode-btn">Dark Mode</button>
+        </div>
+    </header>
 
+    <nav>
+        <ul>
+            <li><a href="#introducere">Despre Mine</a></li>
+            <li><a href="#retea">Rețea</a></li>
+            <li><a href="#monitorizare">Monitorizare</a></li>
+            <li><a href="#configuratie">Configurație PC</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introducere" class="content-section" style="text-align: right">
+            <h2>Despre Mine</h2>
+            <div class="card">
+                <p><strong>Nume:</strong> Gavrila Vladut-Vasile</p>
+                <p><strong>Contact:</strong><br>Email: vladut.gavrila@gmail.com<br>Telefon: +40 742 883 449</p>
+              
+            </div>
+        </section>
+
+        <section id="retea" class="content-section">
+            <h2>Diagrama Rețelei</h2>
+            <div class="network-container">
+                <img src="images/diagrama_retea.png" alt="Diagrama rețelei" class="rounded-image">
+                <div class="network-info" style="text-align: right">
+                    <h3>Caracteristici Rețea</h3>
+                    <ul>
+                        <li><strong>Tip rețea:</strong> Wireless & Wired</li>
+                        <li><strong>Viteză internet:</strong> 1000 Mbps</li>
+                        <li><strong>Dispozitive conectate:</strong> 4 dispozitive</li>
+                    </ul>
+                </div>
+            </div>
+            <p>Rețeaua include dispozitive conectate prin cablu și wireless, asigurând viteze optime pentru muncă și divertisment.</p>
+        </section>
+
+        <section id="monitorizare" class="content-section">
+            <h2>Monitorizare Resurse</h2>
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <div class="numbertext">1 / 3</div>
+                    <img src="images/imagine1.png" style="width:100%">
+                    <div class="text">Monitorul 1</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">2 / 3</div>
+                    <img src="images/imagine2.png" style="width:100%">
+                    <div class="text">Monitorul 2</div>
+                </div>
+
+                <div class="mySlides fade">
+                    <div class="numbertext">3 / 3</div>
+                    <img src="images/imagine3.png" style="width:100%">
+                    <div class="text">Monitorul 3</div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">❮</a>
+                <a class="next" onclick="plusSlides(1)">❯</a>
+            </div>
+
+            <br>
+            <div style="text-align:center">
+                <span class="dot" onclick="currentSlide(1)"></span>
+                <span class="dot" onclick="currentSlide(2)"></span>
+                <span class="dot" onclick="currentSlide(3)"></span>
+            </div>
+
+            <script>
+                let slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    let i;
+                    let slides = document.getElementsByClassName("mySlides");
+                    let dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+            <p>Navigatează prin slide-show pentru a monitoriza resursele.</p>
+        </section>
+
+
+        <section id="configuratie" class="content-section">
+            <h2>Configurație Calculator</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Componentă</th>
+                        <th>Producător</th>
+                        <th>Parametri</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Procesor</td>
+                        <td>Intel</td>
+                        <td>Core i5-9600K, 6 cores, 3.7GHz</td>
+                    </tr>
+                    <tr>
+                        <td>Placă Video</td>
+                        <td>MSI</td>
+                        <td>GeForce GTX 1660 Super, 6GB</td>
+                    </tr>
+                    <tr>
+                        <td>Placă de bază</td>
+                        <td>MSI</td>
+                        <td>B450 Pro Max</td>
+                    </tr>
+                    <tr>
+                        <td>Memorie RAM</td>
+                        <td>Corsair</td>
+                        <td>16GB DDR4 3000MHz</td>
+                    </tr>
+                    <tr>
+                        <td>Stocare</td>
+                        <td>Samsung</td>
+                        <td>SSD M.2 250GB + HDD 1TB</td>
+                    </tr>
+                    <tr>
+                        <td>Sursa</td>
+                        <td>EVGA</td>
+                        <td>650W</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Gavrila Vladut-Vasile | Resurse de Calcul</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
 </html>

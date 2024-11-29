@@ -12,14 +12,14 @@
         color: #f4f4f9;
     }
 
-/* Header */
+
 header {
-    background: linear-gradient(135deg, #2b5876, #4e4376); /* Gradient cu culori mai interesante */
-    text-align: center;
-    padding: 3rem 1rem; /* Spatiu mai mare pentru un aspect mai aerisit */
+    background: linear-gradient(135deg, #2b5876, #4e4376);
+    text-align: right;
+    padding: 3rem 1rem; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-    color: #fff; /* Schimbă culoarea textului header-ului */
+    color: #fff;
 }
 
 .header-container {
@@ -28,16 +28,15 @@ header {
 }
 
 header h1 {
-    font-size: 2.8rem; /* Marire text */
+    font-size: 2.8rem; 
     margin-bottom: 0.5rem;
 }
 
 header .subtitle {
-    font-size: 1.3rem; /* Ajustează subtitlul pentru a-l face mai vizibil */
+    font-size: 1.3rem; 
     margin-bottom: 1rem;
 }
 
-/* Dark Mode Button */
 .dark-mode-btn {
     position: absolute;
     top: 10px;
@@ -50,7 +49,7 @@ header .subtitle {
     cursor: pointer;
     font-size: 1rem;
     transition: all 0.3s ease;
-    font-weight: bold; /* Font mai gros */
+    font-weight: bold; 
 }
 
 body.dark-mode .dark-mode-btn {
@@ -58,7 +57,6 @@ body.dark-mode .dark-mode-btn {
     color: #1d3557;
 }
 
-/* Navigation */
 nav ul {
     display: flex;
     justify-content: center;
@@ -85,7 +83,7 @@ nav ul {
                 color: #457b9d;
             }
 
-/* Footer */
+
 footer {
     background: #457b9d;
     color: white;
@@ -95,7 +93,6 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Content Sections */
 .content-section {
     padding: 2rem;
     margin: 2rem auto;
@@ -114,14 +111,13 @@ body.dark-mode .content-section {
     color: #1d3557;
 }
 
-/* Slide-show */
+
 .slideshow-container {
     max-width: 1000px;
     position: relative;
     margin: auto;
 }
 
-/* Next & previous buttons */
 .prev, .next {
     cursor: pointer;
     position: absolute;
@@ -194,7 +190,6 @@ body.dark-mode .content-section {
     }
 }
 
-/* Table Styles */
 table {
     width: 100%;
     border-collapse: collapse;

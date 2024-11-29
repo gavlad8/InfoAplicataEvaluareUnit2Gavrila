@@ -1,4 +1,17 @@
-﻿body {
+﻿
+.dots-container, .prev, .next {
+    display: none;
+}
+
+
+.image-gallery img, .mySlides img {
+    width: 100%;
+    height: auto; 
+    object-fit: contain;
+}
+
+
+body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
     margin: 0;
